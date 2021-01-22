@@ -1,0 +1,75 @@
+body {
+  background-color: #dfdede;
+}
+
+.pendulum {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background-color: #f3f3f3;
+  top: 50%;
+  left: 50%;
+  border-radius: 4%;
+  align-items: center;
+  border-top: 15px solid #1b1b1b;
+  border-bottom: 15px solid #1b1b1b;
+  border-left: 10px solid #1b1b1b;
+  border-right: 10px solid #1b1b1b;
+  transform: translate(-50%, -50%);
+}
+.pendulum_box {
+  display: flex;
+  padding: 120px 0 0 10px;
+  position: absolute;
+  flex: 1;
+}
+
+.balls {
+  display: flex;
+  padding-left: 40px;
+}
+
+.ball {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #1b1b1b;
+  position: relative;
+  transform-origin: 50% -300%;
+}
+
+.ball::before {
+  content: '';
+  width: 2px;
+  height: 120px;
+  background-color: #333333;
+  left: 18px;
+  top: -120px;
+  position: absolute;
+}
+
+.ball.first {
+  animation: firstball 0.9s alternate ease-in infinite;
+}
+
+@keyframes firstball {
+  0% {
+    transform: rotate(35deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.ball.last {
+  animation: lastball 0.9s alternate ease-out infinite;
+}
+
+@keyframes lastball {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-35deg);
+  }
+}
