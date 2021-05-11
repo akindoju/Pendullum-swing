@@ -16,12 +16,12 @@ body {
   border-left: 10px solid #1b1b1b;
   border-right: 10px solid #1b1b1b;
   transform: translate(-50%, -50%);
+  padding: 0 30px;
 }
 .pendulum_box {
   display: flex;
   padding: 120px 0 0 10px;
   position: absolute;
-  flex: 1;
 }
 
 .balls {
@@ -38,6 +38,7 @@ body {
   transform-origin: 50% -300%;
 }
 
+/* for strings */
 .ball::before {
   content: '';
   width: 2px;
